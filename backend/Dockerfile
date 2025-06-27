@@ -3,10 +3,10 @@ FROM node:18-alpine
 WORKDIR /app
 
 COPY package*.json ./
-RUN npm install && node index.js
+RUN npm install
 
 COPY . .
 
 EXPOSE 3001
 
-CMD ["npm", "start"]
+CMD ["npm", "index.js"]
